@@ -59,6 +59,7 @@ public class MainActivity extends ActionBarActivity {
                 break;
         }
         dzialanie.setText(dzialanie.getText() + "" + value);
+
     }
 
     @Override
