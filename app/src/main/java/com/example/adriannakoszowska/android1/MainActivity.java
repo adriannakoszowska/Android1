@@ -4,6 +4,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 
@@ -21,6 +22,44 @@ public class MainActivity extends ActionBarActivity {
         dzialanie.setText("");
     }
 
+    public void buttonNumeric(View view) {
+        int value=0;
+        TextView dzialanie=(TextView)findViewById(R.id.dzialanie);
+
+        switch (view.getId()) {
+            case R.id.button0:
+                value = 0;
+                break;
+            case R.id.button1:
+                value = 1;
+                break;
+            case R.id.button2:
+                value = 2;
+                break;
+            case R.id.button3:
+                value = 3;
+                break;
+            case R.id.button4:
+                value = 4;
+                break;
+            case R.id.button5:
+                value = 5;
+                break;
+            case R.id.button6:
+                value = 6;
+                break;
+            case R.id.button7:
+                value = 7;
+                break;
+            case R.id.button8:
+                value = 8;
+                break;
+            case R.id.button9:
+                value = 9;
+                break;
+        }
+        dzialanie.setText(dzialanie.getText() + "" + value);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
