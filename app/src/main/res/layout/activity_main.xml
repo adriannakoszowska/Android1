@@ -9,7 +9,7 @@
 
     <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView"
+        android:id="@+id/poprzednie"
         android:textColor="@android:color/holo_blue_light" />
 
     <TextView
@@ -17,8 +17,8 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Large Text"
-        android:id="@+id/textView2"
-        android:layout_below="@+id/textView"
+        android:id="@+id/dzialanie"
+        android:layout_below="@+id/poprzednie"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:textColor="@android:color/holo_blue_light" />
@@ -31,10 +31,11 @@
         android:width="50dp"
         android:height="50dp"
         android:layout_marginTop="56dp"
-        android:layout_below="@+id/textView2"
-        android:layout_toRightOf="@+id/button"
-        android:layout_toEndOf="@+id/button"
-        android:textColor="@android:color/holo_blue_dark" />
+        android:layout_below="@+id/dzialanie"
+        android:layout_toRightOf="@+id/button1"
+        android:layout_toEndOf="@+id/button1"
+        android:textColor="@android:color/holo_blue_dark"
+        android:onClick="buttonNumeric" />
 
     <Button
         android:layout_width="wrap_content"
@@ -45,19 +46,22 @@
         android:layout_alignTop="@+id/button2"
         android:layout_toRightOf="@+id/button2"
         android:layout_toEndOf="@+id/button2"
-        android:layout_above="@+id/button6" />
+        android:layout_above="@+id/button6"
+        android:onClick="buttonNumeric" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1"
-        android:id="@+id/button"
+        android:id="@+id/button1"
         android:layout_alignBottom="@+id/button2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:width="50dp"
         android:height="50dp"
-        android:textColor="@android:color/holo_blue_dark" />
+        android:textColor="@android:color/holo_blue_dark"
+        android:nestedScrollingEnabled="false"
+        android:onClick="buttonNumeric" />
 
     <Button
         android:layout_width="wrap_content"
@@ -66,10 +70,11 @@
         android:id="@+id/button4"
         android:width="50dp"
         android:height="50dp"
-        android:layout_below="@+id/button"
+        android:layout_below="@+id/button1"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:textColor="@android:color/holo_blue_dark" />
+        android:textColor="@android:color/holo_blue_dark"
+        android:onClick="buttonNumeric" />
 
     <Button
         android:layout_width="wrap_content"
@@ -81,7 +86,8 @@
         android:layout_toEndOf="@+id/button4"
         android:width="50dp"
         android:height="50dp"
-        android:textColor="@android:color/holo_blue_dark" />
+        android:textColor="@android:color/holo_blue_dark"
+        android:onClick="buttonNumeric" />
 
     <Button
         android:layout_width="wrap_content"
@@ -93,7 +99,8 @@
         android:layout_toEndOf="@+id/button2"
         android:width="50dp"
         android:height="50dp"
-        android:textColor="@android:color/holo_blue_dark" />
+        android:textColor="@android:color/holo_blue_dark"
+        android:onClick="buttonNumeric" />
 
     <Button
         android:layout_width="wrap_content"
@@ -105,7 +112,8 @@
         android:layout_alignParentStart="true"
         android:width="50dp"
         android:height="50dp"
-        android:textColor="@android:color/holo_blue_dark" />
+        android:textColor="@android:color/holo_blue_dark"
+        android:onClick="buttonNumeric" />
 
     <Button
         android:layout_width="wrap_content"
@@ -117,7 +125,8 @@
         android:layout_toEndOf="@+id/button4"
         android:width="50dp"
         android:height="50dp"
-        android:textColor="@android:color/holo_blue_dark" />
+        android:textColor="@android:color/holo_blue_dark"
+        android:onClick="buttonNumeric" />
 
     <Button
         android:layout_width="wrap_content"
@@ -129,25 +138,27 @@
         android:layout_alignStart="@+id/button6"
         android:width="50dp"
         android:height="50dp"
-        android:textColor="@android:color/holo_blue_dark" />
+        android:textColor="@android:color/holo_blue_dark"
+        android:onClick="buttonNumeric" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
-        android:id="@+id/button10"
+        android:id="@+id/button0"
         android:width="50dp"
         android:height="50dp"
         android:textColor="@android:color/holo_blue_dark"
         android:layout_below="@+id/button7"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:onClick="buttonNumeric" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="+"
-        android:id="@+id/button11"
+        android:id="@+id/dodaj"
         android:layout_alignTop="@+id/button3"
         android:layout_toRightOf="@+id/button3"
         android:layout_toEndOf="@+id/button3"
@@ -158,7 +169,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="-"
-        android:id="@+id/button12"
+        android:id="@+id/odejmij"
         android:layout_below="@+id/button3"
         android:layout_toRightOf="@+id/button3"
         android:layout_toEndOf="@+id/button3"
@@ -169,7 +180,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="*"
-        android:id="@+id/button13"
+        android:id="@+id/pomnoz"
         android:layout_alignTop="@+id/button9"
         android:layout_toRightOf="@+id/button9"
         android:layout_toEndOf="@+id/button9"
@@ -180,8 +191,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="/"
-        android:id="@+id/button14"
-        android:layout_alignBottom="@+id/button10"
+        android:id="@+id/podziel"
+        android:layout_alignBottom="@+id/button0"
         android:layout_alignLeft="@+id/button9"
         android:layout_alignStart="@+id/button9"
         android:width="50dp"
@@ -191,10 +202,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="."
-        android:id="@+id/button15"
-        android:layout_alignTop="@+id/button10"
-        android:layout_toRightOf="@+id/button10"
-        android:layout_toEndOf="@+id/button10"
+        android:id="@+id/przecinek"
+        android:layout_alignTop="@+id/button0"
+        android:layout_toRightOf="@+id/button0"
+        android:layout_toEndOf="@+id/button0"
         android:width="50dp"
         android:height="50dp" />
 
@@ -202,8 +213,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="="
-        android:id="@+id/button16"
-        android:layout_alignBottom="@+id/button14"
+        android:id="@+id/rownasie"
+        android:layout_alignBottom="@+id/podziel"
         android:layout_toRightOf="@+id/button9"
         android:layout_toEndOf="@+id/button9"
         android:width="50dp"
@@ -213,8 +224,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Czyść"
-        android:id="@+id/button17"
-        android:layout_below="@+id/button10"
+        android:id="@+id/czysc"
+        android:layout_below="@+id/button0"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="61dp" />
@@ -223,8 +234,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Wynik"
-        android:id="@+id/button18"
-        android:layout_below="@+id/button17"
+        android:id="@+id/wynik"
+        android:layout_below="@+id/czysc"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
