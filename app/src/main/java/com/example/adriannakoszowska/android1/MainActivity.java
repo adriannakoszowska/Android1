@@ -141,6 +141,7 @@ public class MainActivity extends ActionBarActivity {
         dzialanie_globalne = "";
         dzialanie.setText("");
         poprzednie.setText("");
+
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
