@@ -132,6 +132,16 @@ public class MainActivity extends ActionBarActivity {
         poprzednie.setText("");
         dzialanie.setText(value);
     }
+    public void Czyszczenie(View view) {
+        TextView poprzednie=(TextView)findViewById(R.id.poprzednie);
+        TextView dzialanie=(TextView)findViewById(R.id.dzialanie);
+
+        numberone = 0;
+        numbertwo = 0;
+        dzialanie_globalne = "";
+        dzialanie.setText("");
+        poprzednie.setText("");
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
