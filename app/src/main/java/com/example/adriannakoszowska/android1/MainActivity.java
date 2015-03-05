@@ -90,7 +90,7 @@ public class MainActivity extends ActionBarActivity {
                 break;
         }
         if(dzialanie != null) {
-            dzialanie.setText(dzialanie.getText() + value);
+            poprzednie.setText(dzialanie.getText() + value);
             dzialanie.setText("");
         } else {
             dzialanie.setText("Wprowadź liczbę");
@@ -107,10 +107,31 @@ public class MainActivity extends ActionBarActivity {
             poprzednie.setText(poprzednie.getText() + "" + dzialanie.getText());
             dzialanie.setText("");
 
+            wynik();
             finish = true;
         }
     }
-
+    public void wynik() {
+        TextView poprzednie=(TextView)findViewById(R.id.poprzednie);
+        TextView dzialanie=(TextView)findViewById(R.id.dzialanie);
+        String value="";
+        switch (dzialanie_globalne) {
+            case "dod":
+                value = String.valueOf(numberone + numbertwo);
+                break;
+            case "ode":
+                value = String.valueOf(numberone - numbertwo);
+                break;
+            case "mno":
+                value = String.valueOf(numberone * numbertwo);
+                break;
+            case "dzi":
+                value = String.valueOf(numberone / numbertwo);
+                break;
+        }
+        poprzednie.setText("");
+        dzialanie.setText(value);
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -129,7 +150,6 @@ public class MainActivity extends ActionBarActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 }
