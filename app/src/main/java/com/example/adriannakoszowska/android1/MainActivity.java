@@ -9,6 +9,10 @@ import android.widget.TextView;
 
 
 public class MainActivity extends ActionBarActivity {
+    String dzialanie_globalne="";
+    double numberone;
+    double numbertwo;
+    boolean finish = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +63,52 @@ public class MainActivity extends ActionBarActivity {
                 break;
         }
         dzialanie.setText(dzialanie.getText() + "" + value);
+    }
+    public void Click(View view) {
+        TextView poprzednie=(TextView)findViewById(R.id.poprzednie);
+        TextView dzialanie=(TextView)findViewById(R.id.dzialanie);
+        //dodawanie liczby do dzialania
+        numberone = Integer.valueOf(dzialanie.getText().toString());
+        //dodawanie znaku
+        String value="";
+        switch (view.getId()) {
+            case R.id.dodaj:
+                value = "+";
+                dzialanie_globalne = "dod";
+                break;
+            case R.id.odejmij:
+                value = "-";
+                dzialanie_globalne = "ode";
+                break;
+            case R.id.pomnoz:
+                value = "*";
+                dzialanie_globalne = "mno";
+                break;
+            case R.id.podziel:
+                value = "/";
+                dzialanie_globalne = "dzi";
+                break;
+        }
+        if(dzialanie != null) {
+            dzialanie.setText(dzialanie.getText() + value);
+            dzialanie.setText("");
+        } else {
+            dzialanie.setText("Wprowadź liczbę");
+        }
+    }
+    public void getnumbertwo(View view) {
+        TextView poprzednie=(TextView)findViewById(R.id.poprzednie);
+        TextView dzialanie=(TextView)findViewById(R.id.dzialanie);
+        if(dzialanie == null || poprzednie == null) {
+            dzialanie.setText("Najpierw stwórz działanie");
+        } else {
+            numbertwo = Integer.valueOf(dzialanie.getText().toString());
 
+            poprzednie.setText(poprzednie.getText() + "" + dzialanie.getText());
+            dzialanie.setText("");
+
+            finish = true;
+        }
     }
 
     @Override
