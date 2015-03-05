@@ -222,7 +222,7 @@
         android:layout_toEndOf="@+id/button9"
         android:width="50dp"
         android:height="50dp"
-        android:onClick="Click" />
+        android:onClick="getnumbertwo" />
 
     <Button
         android:layout_width="wrap_content"
