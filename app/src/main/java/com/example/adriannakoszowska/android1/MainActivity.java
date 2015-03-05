@@ -10,8 +10,8 @@ import android.widget.TextView;
 
 public class MainActivity extends ActionBarActivity {
     String dzialanie_globalne="";
-    double numberone;
-    double numbertwo;
+    float numberone;
+    float numbertwo;
     boolean finish = false;
 
     @Override
@@ -27,39 +27,42 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void buttonNumeric(View view) {
-        int value=0;
+        String value = "0";
         TextView dzialanie=(TextView)findViewById(R.id.dzialanie);
 
         switch (view.getId()) {
             case R.id.button0:
-                value = 0;
+                value = "0";
                 break;
             case R.id.button1:
-                value = 1;
+                value = "1";
                 break;
             case R.id.button2:
-                value = 2;
+                value = "2";
                 break;
             case R.id.button3:
-                value = 3;
+                value = "3";
                 break;
             case R.id.button4:
-                value = 4;
+                value = "4";
                 break;
             case R.id.button5:
-                value = 5;
+                value = "5";
                 break;
             case R.id.button6:
-                value = 6;
+                value = "6";
                 break;
             case R.id.button7:
-                value = 7;
+                value = "7";
                 break;
             case R.id.button8:
-                value = 8;
+                value = "8";
                 break;
             case R.id.button9:
-                value = 9;
+                value = "9";
+                break;
+            case R.id.przecinek:
+                value = ".";
                 break;
         }
         dzialanie.setText(dzialanie.getText() + "" + value);
@@ -68,7 +71,7 @@ public class MainActivity extends ActionBarActivity {
         TextView poprzednie=(TextView)findViewById(R.id.poprzednie);
         TextView dzialanie=(TextView)findViewById(R.id.dzialanie);
         //dodawanie liczby do dzialania
-        numberone = Integer.valueOf(dzialanie.getText().toString());
+        numberone = Float.valueOf(dzialanie.getText().toString());
         //dodawanie znaku
         String value="";
         switch (view.getId()) {
@@ -102,7 +105,7 @@ public class MainActivity extends ActionBarActivity {
         if(dzialanie == null || poprzednie == null) {
             dzialanie.setText("Najpierw stwórz działanie");
         } else {
-            numbertwo = Integer.valueOf(dzialanie.getText().toString());
+            numbertwo = Float.valueOf(dzialanie.getText().toString());
 
             poprzednie.setText(poprzednie.getText() + "" + dzialanie.getText());
             dzialanie.setText("");

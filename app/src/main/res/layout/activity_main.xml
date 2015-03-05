@@ -210,7 +210,8 @@
         android:layout_toRightOf="@+id/button0"
         android:layout_toEndOf="@+id/button0"
         android:width="50dp"
-        android:height="50dp" />
+        android:height="50dp"
+        android:onClick="buttonNumeric" />
 
     <Button
         android:layout_width="wrap_content"
