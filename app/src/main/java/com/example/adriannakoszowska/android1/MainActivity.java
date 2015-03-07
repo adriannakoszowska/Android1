@@ -68,35 +68,33 @@ public class MainActivity extends ActionBarActivity {
         dzialanie.setText(dzialanie.getText() + "" + value);
     }
     public void Click(View view) {
-        TextView poprzednie=(TextView)findViewById(R.id.poprzednie);
-        TextView dzialanie=(TextView)findViewById(R.id.dzialanie);
-        //dodawanie liczby do dzialania
-        numberone = Float.valueOf(dzialanie.getText().toString());
-        //dodawanie znaku
-        String value="";
-        switch (view.getId()) {
-            case R.id.dodaj:
-                value = "+";
-                dzialanie_globalne = "dod";
-                break;
-            case R.id.odejmij:
-                value = "-";
-                dzialanie_globalne = "ode";
-                break;
-            case R.id.pomnoz:
-                value = "*";
-                dzialanie_globalne = "mno";
-                break;
-            case R.id.podziel:
-                value = "/";
-                dzialanie_globalne = "dzi";
-                break;
-        }
-        if(dzialanie != null) {
-            poprzednie.setText(dzialanie.getText() + value);
-            dzialanie.setText("");
-        } else {
+        TextView poprzednie = (TextView) findViewById(R.id.poprzednie);
+        TextView dzialanie = (TextView) findViewById(R.id.dzialanie);
+        if(dzialanie.getText().toString() == "") {
             dzialanie.setText("Wprowadź liczbę");
+        } else {
+            //dodawanie liczby do dzialania
+            numberone = Float.valueOf(dzialanie.getText().toString());
+            //dodawanie znaku
+            String value = "";
+            switch (view.getId()) {
+                case R.id.dodaj:
+                    value = "+";
+                    dzialanie_globalne = "dod";
+                    break;
+                case R.id.odejmij:
+                    value = "-";
+                    dzialanie_globalne = "ode";
+                    break;
+                case R.id.pomnoz:
+                    value = "*";
+                    dzialanie_globalne = "mno";
+                    break;
+                case R.id.podziel:
+                    value = "/";
+                    dzialanie_globalne = "dzi";
+                    break;
+            }
         }
     }
     public void getnumbertwo(View view) {
